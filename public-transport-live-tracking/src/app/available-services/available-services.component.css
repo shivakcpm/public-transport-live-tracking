@@ -1,0 +1,86 @@
+.available-services {
+    text-align: center;
+}
+
+#header {
+    text-align: center;
+    color: #6168e7;
+    text-decoration: underline;
+    margin-bottom: 30px;
+}
+
+.service-number {
+    display: inline-block;
+    padding: 10px;
+    border: 1px solid #6168e7;
+    color: #ffffff;
+    background: #6168e7;
+    border-radius: 8px;
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+.container-list {
+    border-right: 6px solid green;
+    height: 100%;
+    display: inline-block;
+    position: relative;
+    margin-left: -3px;
+    top: 0;
+}
+
+.parent-class {
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    border: 1px solid #EFEFF2;
+}
+
+.bus-icon {
+    width: 30px;
+    margin-left: 30px;
+    margin-right: -45px;
+}
+
+.time-indicator {
+    color: #B22222;
+}
+
+.padding10 {
+    padding: 10px;
+}
+
+.bus-info {
+    margin-top: 5%;
+}
+
+table {
+    border : 1px solid #3CAEA3;
+    border-radius: 5px;
+    width:100%;
+}
+table td{
+    border :  1px solid #3CAEA3;
+    border-collapse: collapse;
+    border-radius: 5px;
+    padding: 10px;
+}
+.details{
+    padding: 5px;
+    font-size: 30px;
+    border-top: 1px  solid #3CAEA3;
+    border-left: 1px  solid #3CAEA3;
+    border-right: 1px  solid #3CAEA3;   
+}
+tr td:first-child{
+    color: #333d4d;
+    font-weight: 500;
+    font-style: bold;
+    font-size: 14px;
+}
+@media only screen and (max-width: 766px){
+    .bus-info{
+        margin : 5% 20%;
+    }
+    
+}

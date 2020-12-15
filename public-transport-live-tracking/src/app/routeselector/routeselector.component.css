@@ -1,0 +1,25 @@
+
+.mat-form-field {
+    display: block;
+}
+.parent-margin{
+    margin: 5% 20%;
+    border:1px solid #dedefe;
+    border-radius: 8px;
+    padding: 5%;
+}
+button[mat-raised-button]{
+    margin: 10px;
+}
+.marginbt-10{
+    margin-bottom: 10px;
+}
+.content-container{
+    margin:5% 20%;
+    border-radius: 8px;
+    border:1px solid #dedefe;
+    padding: 5%;
+    background: #3f51b5;
+    color:#ffffff;
+    line-height: 35px;
+}

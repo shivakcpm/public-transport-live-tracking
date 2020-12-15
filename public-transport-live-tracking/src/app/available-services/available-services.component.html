@@ -1,0 +1,33 @@
+<div class="available-services row">
+  <div class="col-sm-12 col-md-6">
+
+
+    <div class="bus-info">
+      <div class= "service-number">Bus Details</div>
+      <div cass = "row">
+        <table>  
+          <tr> <td>BUS NUMBER</td> <td>TS 07 Z 2168</td> </tr> 
+          <tr> <td>SERVICE NUMBER</td> <td>218L</td> </tr> 
+          <tr> <td>BUS TYPE</td> <td>METRO EXPRESS</td> </tr> 
+          <tr> <td>TICKET PRICE (RS)</td> <td>25</td> </tr> 
+          <tr> <td>DISTANCE (KM)</td> <td>7</td> </tr> 
+        
+        </table>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-12 col-md-6">
+    <div class="container-list">
+
+      <div class="parent-class" *ngFor="let stagemodel of stages">
+        <span>{{stagemodel.stage}}</span> <img class="bus-icon" *ngIf="stagemodel.stage == youAreAt"
+          src="./../../assets/person.png" />
+
+        <div class="padding10">expected arrival time <span class="time-indicator">{{stagemodel.arrivalTime}}</span>
+          <img class="bus-icon" *ngIf="stagemodel.stage == currentStop" src="./../../assets/bus.png" />
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

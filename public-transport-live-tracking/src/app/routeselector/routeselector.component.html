@@ -1,0 +1,39 @@
+<div class="row">
+  <div class="col-md-6 col-sm-12 marginbt-10">
+    <div class="parent-margin">
+    <form class="route-form" [formGroup]="routeGroup" >
+      <mat-form-field>
+        <input type="text"   placeholder="Select Origin"  matInput formControlName="origin"
+          [matAutocomplete]="auto1">
+        <mat-autocomplete #auto1="matAutocomplete" [displayWith]="displayFn">
+          <mat-option *ngFor="let option of data | filter : routeGroup.get('origin').value" [value]="option">
+            {{option.stop_name}}
+          </mat-option>
+        </mat-autocomplete>
+      </mat-form-field>
+      <mat-form-field>
+        <input type="text" placeholder="Select Destination"    matInput formControlName="destination"
+          [matAutocomplete]="auto2">
+        <mat-autocomplete #auto2="matAutocomplete" [displayWith]="displayFn">
+            <mat-option *ngFor="let option of data | filter : routeGroup.get('destination').value" [value]="option">
+                {{option.stop_name}}
+              </mat-option>
+        </mat-autocomplete>
+      </mat-form-field>
+      <button mat-raised-button color="accent" (click) = "reset()">Reset</button> 
+      <button mat-raised-button (click) = "getRoutes()" color="primary" >GO</button> 
+    </form>
+    </div>
+  </div>
+  <div class="col-md-6 col-sm-12">
+    <div class="content-container" *ngIf="!showRoute">
+    <header>Welcome To Live Tracker</header>
+    <article>
+      Live Tracker application is implemented to encourage usage of public transport. This application will update you with the live location of RTC buses in the selected route.
+      <br>
+      Thanks for using RTC Live Tracker
+    </article>
+  </div>
+  <app-available-services *ngIf="showRoute"></app-available-services>
+  </div>
+</div>
